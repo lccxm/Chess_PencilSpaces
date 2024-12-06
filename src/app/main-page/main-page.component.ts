@@ -32,10 +32,7 @@ export class MainPageComponent {
 
       const lastTurnColor = event.data.color;
 
-      const targetIframe =
-        lastTurnColor === 'white'
-          ? this.blackBoardIframe
-          : this.whiteBoardIframe;
+      const targetIframe = lastTurnColor === 'white' ? this.blackBoardIframe : this.whiteBoardIframe;
 
       const targetWindow = targetIframe.nativeElement.contentWindow;
       if (targetWindow) {
@@ -66,11 +63,11 @@ export class MainPageComponent {
     localStorage.clear();
   }
 
-  getIframePageUrl(isWhite: boolean = false): SafeResourceUrl {
-    const whiteBoardUrl = `${window.location.origin}/iframePage?isWhiteBoard=true`;
-    const blackBoardUrl = `${window.location.origin}/iframePage`;
+  getIframePageUrl(isWhiteBoard: boolean = false): SafeResourceUrl {
+    const whiteBoardUrl = `${window.location.origin}/iframepage?isWhiteBoard=true`;
+    const blackBoardUrl = `${window.location.origin}/iframepage`;
 
-    if (isWhite) {
+    if (isWhiteBoard) {
       return this.sanitizer.bypassSecurityTrustResourceUrl(whiteBoardUrl); 
     } else {
       return this.sanitizer.bypassSecurityTrustResourceUrl(blackBoardUrl);
