@@ -1,0 +1,10 @@
+<div class="game-wrapper" (click)="reset()">
+    <div class="boards-container">
+        <iframe #white_board_iframe [src]="whiteBoardUrl" width="600" height="600"></iframe>
+        <iframe #black_board_iframe [src]="blackBoardUrl" width="600" height="600"></iframe>
+    </div>
+    <div *ngIf="gameFinished" class="notification">
+        <p>Checkmate!</p>
+        <button (click)="reset()">Reset</button>
+      </div>
+</div>
