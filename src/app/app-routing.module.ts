@@ -4,9 +4,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ChessComponent } from './chess/chess.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'mainPage', pathMatch: 'full' },
-  {path: 'mainPage', component: MainPageComponent},
-  {path: 'iframePage', component: ChessComponent}
+  { path: '', redirectTo: '/mainpage', pathMatch: 'full' },
+  {path: 'mainpage', component: MainPageComponent},
+  {path: 'iframepage', component: ChessComponent}
 ];
 
 @NgModule({

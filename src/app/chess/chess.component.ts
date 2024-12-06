@@ -71,7 +71,7 @@ export class ChessComponent implements OnInit {
     }
   
     private getMainPageUrl(): SafeResourceUrl {
-      return `${window.location.origin}/mainPage`;
+      return `${window.location.origin}/mainpage`;
     }
  
 }
